@@ -1,2 +1,26 @@
 .env
 node_modules/
+.DS_Store
+
+
+
+# Build output
+/dist/
+/build/
+
+# IDE and editor files
+.vscode/
+/.idea/
+
+# System files
+Thumbs.db
+
+# Log files
+*.log
+
+# npm cache
+.npm/
+
+# Backup files
+*.bak
+*.swp
