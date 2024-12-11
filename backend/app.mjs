@@ -1,7 +1,6 @@
 import express from 'express';
 import dotenv from 'dotenv';
 import cors from 'cors';
-import bodyParser from 'body-parser';
 import "./helpers/db.mjs"
 dotenv.config();
 
@@ -14,7 +13,7 @@ const PORT = process.env.PORT || 8080;
 
 // Middleware
 app.use(cors());
-app.use(bodyParser.json());
+app.use(express.json());
 
 app.use('/api/users', userRoutes);
 app.use('/api/events', calendarRoutes);
