@@ -1,0 +1,23 @@
+{
+  "type": "module",
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "mongoose": "^8.8.4"
+  },
+  "name": "drinking-party-project-root",
+  "version": "1.0.0",
+  "description": "飲み会の日取りをシェアするアプリ",
+  "main": "./backend/app.mjs",
+  "devDependencies": {
+    "nodemon": "^3.1.7"
+  },
+  "scripts": {
+    "dev:api": "npx nodemon ./backend/app.mjs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,53 @@
+POST http://localhost:3000/api/users
+Content-Type: application/json
+
+{
+  "name": "John Doe",
+  "email": "john.doe@example.com",
+  "role": "participant"
+}
+
+###
+GET http://localhost:3000/api/users
+
+
+###
+DELETE http://localhost:3000/api/users/6758bf6c1790fe430abe8edd
+
+
+###
+PATCH http://localhost:3000/api/users/6758bf6c1790fe430abe8edd
+Content-Type: application/json
+
+{
+  "name": "John Updated",
+  "email": "john.updated@example.com",
+  "role": "organizer"
+}
+
+
+###
+POST http://localhost:3000/api/events
+Content-Type: application/json
+
+{
+  "name": "Holiday Party",
+  "date": "2024-12-25"
+}
+
+
+###
+GET http://localhost:3000/api/events
+
+
+###
+DELETE http://localhost:3000/api/events/6758c029d32b4efe66e91419
+
+###
+PATCH http://localhost:3000/api/events/6758c029d32b4efe66e91419
+Content-Type: application/json
+
+{
+  "name": "Updated Holiday Party",
+  "date": "2024-12-31"
+}
