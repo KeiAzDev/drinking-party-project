@@ -4,7 +4,7 @@ const eventSchema = Schema({
     name: { type: String, required: true },
     date: { type: String, required: true },
     participants: [{ type: Schema.Types.ObjectId, ref: 'User' }]
-});
+}, {timestamp: true});
 
 
 const Event = model('Event', eventSchema);

@@ -1,12 +1,9 @@
 import express from 'express';
 import dotenv from 'dotenv';
 import cors from 'cors';
+import apiRoutes from "./server/api-routes/index.mjs";
 import "./helpers/db.mjs"
 dotenv.config();
-
-// Routes
-import userRoutes from './routes/userRoutes.mjs';
-import calendarRoutes from './routes/calendarRoutes.mjs';
 
 const app = express();
 const PORT = process.env.PORT || 8080;
@@ -15,9 +12,7 @@ const PORT = process.env.PORT || 8080;
 app.use(cors());
 app.use(express.json());
 
-app.use('/api/users', userRoutes);
-app.use('/api/events', calendarRoutes);
-
+app.use('/api', apiRoutes);
 
 
 // Start the server

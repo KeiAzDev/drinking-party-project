@@ -1,33 +1,33 @@
-POST http://localhost:3000/api/users
+POST http://localhost:8080/api/users
 Content-Type: application/json
 
 {
-  "name": "John Doe",
-  "email": "john.doe@example.com",
+  "name": "keidasfdas",
+  "email": "keiasdasd@example.com",
   "role": "participant"
 }
 
 ###
-GET http://localhost:3000/api/users
+GET http://localhost:8080/api/users
 
 
 ###
-DELETE http://localhost:3000/api/users/6758bf6c1790fe430abe8edd
+DELETE http://localhost:8080/api/users/675a36c9f48423f20649f14f
 
 
 ###
-PATCH http://localhost:3000/api/users/6758bf6c1790fe430abe8edd
+PATCH http://localhost:8080/api/users/675a34189fabaf7fff99c912
 Content-Type: application/json
 
 {
-  "name": "John Updated",
-  "email": "john.updated@example.com",
-  "role": "organizer"
+  "name": "sdaad",
+  "email": "dasda.updated@example.com",
+  "role": "participant"
 }
 
 
 ###
-POST http://localhost:3000/api/events
+POST http://localhost:8080/api/events
 Content-Type: application/json
 
 {
@@ -37,14 +37,14 @@ Content-Type: application/json
 
 
 ###
-GET http://localhost:3000/api/events
+GET http://localhost:8080/api/events
 
 
 ###
-DELETE http://localhost:3000/api/events/6758c029d32b4efe66e91419
+DELETE http://localhost:8080/api/events/675a8241dd6e3b6e9a69aadb
 
 ###
-PATCH http://localhost:3000/api/events/6758c029d32b4efe66e91419
+PATCH http://localhost:8080/api/events/675a8241dd6e3b6e9a69aadb
 Content-Type: application/json
 
 {
