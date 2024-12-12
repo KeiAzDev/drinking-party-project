@@ -1,38 +1,30 @@
 import express from 'express';
-import User from '../../models/User.mjs';
+import {body} from "express-validator";
+import { registUser, updateUser, getAllUsers, deleteUser } from '../controllers/users.mjs';
+import {requestErrorHandler} from "../../middlewares/requestErrorHandler.mjs";
 
 const router = express.Router();
 
 // GET - ユーザーの一覧を取得
-router.get('/', async (req, res) => {
-        const users = await User.find();
-        res.json(users);
-});
+router.get('/', requestErrorHandler(getAllUsers));
 
 // POST - 新しいユーザーを作成
-router.post('/', async (req, res) => {
-        const user = new User(req.body);
-        const newUser = await user.save();
-        res.status(201).json(newUser);
-});
+router.post('/',
+    body('name').notEmpty(), 
+    body('email').notEmpty(), 
+    body('role').notEmpty(), 
+    requestErrorHandler(registUser)
+);
 
 // DELETE - ユーザーを削除
-router.delete('/:id', async (req, res) => {
-    const _id = req.params.id;
-    await User.deleteOne({_id});
-    res.status(201).json({"msg":"User Delete Succeeded"});
-});
+router.delete('/:id', requestErrorHandler(deleteUser));
 
 // PATCH - ユーザーを更新 これは必要か？
-router.patch('/:id', async (req, res) => {
-    const { name, email, role } = req.body;
-    const _id = req.params.id;
-    const user = await User.findById(_id);
-    if(name !== undefined) user.name = name;
-    if(email !== undefined) user.email = email;
-    if(role !== undefined) user.role = role;
-    await user.save();
-    res.json(user);
-});
+router.patch('/:id',
+    body('name').optional().notEmpty(), 
+    body('email').optional().notEmpty(), 
+    body('role').optional().notEmpty(),
+    requestErrorHandler(updateUser)
+);
 
 export default router;

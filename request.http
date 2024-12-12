@@ -2,8 +2,8 @@ POST http://localhost:8080/api/users
 Content-Type: application/json
 
 {
-  "name": "keidasfdas",
-  "email": "keiasdasd@example.com",
+  "name": "sa",
+  "email": "gpopoyan@email.com",
   "role": "participant"
 }
 
@@ -12,7 +12,7 @@ GET http://localhost:8080/api/users
 
 
 ###
-DELETE http://localhost:8080/api/users/675a36c9f48423f20649f14f
+DELETE http://localhost:8080/api/users/67
 
 
 ###
@@ -20,8 +20,7 @@ PATCH http://localhost:8080/api/users/675a34189fabaf7fff99c912
 Content-Type: application/json
 
 {
-  "name": "sdaad",
-  "email": "dasda.updated@example.com",
+  "email": "doooooo.updated@example.com",
   "role": "participant"
 }
 
@@ -31,8 +30,8 @@ POST http://localhost:8080/api/events
 Content-Type: application/json
 
 {
-  "name": "Holiday Party",
-  "date": "2024-12-25"
+  "name": "",
+  "date": "2024-12-23"
 }
 
 
@@ -44,10 +43,9 @@ GET http://localhost:8080/api/events
 DELETE http://localhost:8080/api/events/675a8241dd6e3b6e9a69aadb
 
 ###
-PATCH http://localhost:8080/api/events/675a8241dd6e3b6e9a69aadb
+PATCH http://localhost:8080/api/events/675b2f3aeacbec5423095d6b
 Content-Type: application/json
 
 {
-  "name": "Updated Holiday Party",
-  "date": "2024-12-31"
+  "date": "2024-12-21"
 }
